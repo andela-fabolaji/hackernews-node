@@ -1,0 +1,12 @@
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/abolaji-femi-52fa62/prisma/dev
+
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
+
+hooks:
+  post-deploy:
+    - prisma generate
